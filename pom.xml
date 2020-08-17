@@ -60,7 +60,7 @@
         <profile>
             <id>dev</id>
             <properties>
-                <classifier.type>RELEASE</classifier.type>
+                <classifier.type>DEV</classifier.type>
 		<server.hostname>localhost</server.hostname>
             </properties>
         </profile>
