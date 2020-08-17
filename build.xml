@@ -7,7 +7,7 @@
 		<echo level="info" message="Restarting Application Server on ${server.hostname}." />
 		<echo level="info" message="############################################" />
 		
-		<!--runn custom server restart script-->
+		<!--run custom server restart script-->
 		<sshexec 
 			host="${server.hostname}"
 			username="server" 
