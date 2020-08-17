@@ -1,0 +1,24 @@
+<project>
+	<taskdef resource="net/sf/antcontrib/antlib.xml"/>
+	<property name="jboss.home" value="/home/server/server_base"></property>
+	
+      <target name="deploy">		       
+		<echo level="info" message="############################################" />
+		<echo level="info" message="Restarting Application Server on ${server.hostname}." />
+		<echo level="info" message="############################################" />
+		
+		<!--runn custom server restart script-->
+		<sshexec 
+			host="${server.hostname}"
+			username="server" 
+			password="${server.password}"
+			command=". .bash_profile;
+					./server.sh restart;"
+			trust="true" />
+		
+		<echo level="info" message="###########################################" />
+		<echo level="info" message="Restarted Application Server on ${server.hostname}." />
+		<echo level="info" message="###########################################" />
+		<echo level="info" message="" />
+	</target>
+</project>
